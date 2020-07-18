@@ -28,21 +28,28 @@ export default {
     return {
       name: "",
       errorText: null,
-      colour: ['text-success','text-danger', 'text-warning', 'text-info', 'text-dark']
-
+      colour: [
+        "text-success",
+        "text-danger",
+        "text-warning",
+        "text-info",
+        "text-dark"
+      ]
     };
   },
   methods: {
     login() {
       if (this.name) {
-        this.$router.push({ name: "Chat", params: { name: this.name, colour: this.randomColour() } });
+        this.$router.push({
+          name: "Chat",
+          params: { name: this.name, colour: this.randomColour() }
+        });
       } else {
         this.errorText = "Please enter a name first!";
       }
     },
     randomColour() {
       let randomIndex = Math.floor(Math.random() * this.colour.length);
-      console.log(this.colour[randomIndex]);
       return this.colour[randomIndex];
     }
   }

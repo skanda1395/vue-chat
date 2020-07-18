@@ -27,7 +27,7 @@ export default {
   data() {
     return {
       newMessage: null,
-      errorText: null,
+      errorText: null
     };
   },
   methods: {

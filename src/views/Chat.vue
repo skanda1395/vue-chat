@@ -29,7 +29,7 @@ import moment from "moment";
 
 export default {
   name: "Chat",
-  props: ["name", 'colour'],
+  props: ["name", "colour"],
   components: {
     CreateMessage
   },
@@ -50,7 +50,7 @@ export default {
             name: doc.data().name,
             message: doc.data().message,
             colour: doc.data().colour,
-            timestamp: moment(doc.data().timestamp).format("LTS"),
+            timestamp: moment(doc.data().timestamp).format("LTS")
           });
         }
       });
