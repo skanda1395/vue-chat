@@ -1,7 +1,10 @@
 <template>
   <div class="container chat">
-    <h2 class="text-primary text-center">Real Time Chat</h2>
-    <h5 class="text-secondary text-center">Powered by Vue.js and Firebase</h5>
+    <h2 class="text-primary text-center mb-2">Real Time Chat</h2>
+    <h5 class="text-secondary text-center">
+      Powered by <img src="@/assets/vue_logo.png" alt="Vue logo" /> and
+      <img src="@/assets/firebase_logo.png" alt="Firebase logo" />
+    </h5>
     <div class="card">
       <div class="card-body">
         <p v-if="!messages.length" class="text-secondary no_messages">
@@ -82,5 +85,9 @@ export default {
 .messages {
   max-height: 300px;
   overflow: auto;
+}
+.container img {
+  width: 32px;
+  height: auto;
 }
 </style>
